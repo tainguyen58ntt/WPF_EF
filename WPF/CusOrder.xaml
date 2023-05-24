@@ -1,0 +1,70 @@
+﻿<Window x:Class="WPF.CusOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="CusOrder" Height="689" Width="1023">
+    <Grid Margin="196,10,137,23">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="4"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <Label Name="lbOrderInf"  Content="Order Information"></Label>
+
+            <Label Name="lbOrId" Content="[OrderId]"></Label>
+            <TextBox IsReadOnly="True" Name="txtOrId" Height="25" Text="{Binding Path=OrderId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+
+            <Label Name="lbOrCusId" Content="[CustomerId]"></Label>
+            <TextBox Name="txtOrCusId" Height="25" Text="{Binding Path=CustomerId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+
+            <Label Name="lbOrDate" Content="[OrderDate]"></Label>
+            <TextBox Name="txtOrDate" Height="25" Text="{Binding Path=OrderDate, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <Label Name="lbShipDate" Content="[ShippedDate]"></Label>
+            <TextBox Name="txtShipDate" Height="25" Text="{Binding Path=ShippedDate, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <Label Name="lbOrTotal" Content="[Total]"></Label>
+            <TextBox Name="txtOrTotal" Height="25" Text="{Binding Path=Total, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <Label Name="lbOrStatus" Content="[OrderStatus]"></Label>
+            <TextBox Name="txtOrStatus" Height="25" Text="{Binding Path=OrderStatus, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+ HorizontalAlignment="Left" Margin="189,136,0,84">
+          
+            <Button x:Name="btn_View_OrderDetail" Width="80" Content="View Order Detail"
+                Click="btn_View_OrderDetail_Click" Height="65"/>
+        </StackPanel>
+        <ListView Grid.Row="1" Name="LvPro" Width="Auto" Height="Auto" Margin="0,74,-154,10" Grid.RowSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="OrderId" Width="100" 
+                                            DisplayMemberBinding="{Binding Path=OrderId}"/>
+                    <GridViewColumn Header="CustomerId" Width="200"
+                                             DisplayMemberBinding="{Binding Path=CustomerId}"/>
+                    <GridViewColumn Header="OrderDate" Width="200"
+                                           DisplayMemberBinding="{Binding Path=OrderDate}"/>
+                    <GridViewColumn Header="ShippedDate" Width="100"
+                                           DisplayMemberBinding="{Binding Path=ShippedDate}"/>
+                    <GridViewColumn Header="Total" Width="100"
+                                             DisplayMemberBinding="{Binding Path=Total}"/>
+                    <GridViewColumn Header="OrderStatus" Width="100"
+                                             DisplayMemberBinding="{Binding Path=OrderStatus}"/>
+
+
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Grid.Row="3" x:Name="btnClose" Margin="10"
+ HorizontalAlignment="Right" VerticalAlignment="Bottom"
+ Width="80" Content="Close" Click="btnClose_Click" />
+
+
+
+    </Grid>
+</Window>

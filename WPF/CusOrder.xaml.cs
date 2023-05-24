@@ -1,0 +1,42 @@
+﻿using ClassLibrary1.Repository;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace WPF
+{
+    /// <summary>
+    /// Interaction logic for CusOrder.xaml
+    /// </summary>
+    public partial class CusOrder : Window
+    {
+        IOderRepository _oderRepository;
+        public CusOrder(IOderRepository oderRepository, int cusId)
+        {
+            InitializeComponent();
+            _oderRepository = oderRepository;
+
+            LvPro.ItemsSource = _oderRepository.GetOrdersByCustomerID(cusId);
+        }
+
+        private void btn_View_OrderDetail_Click(object sender, RoutedEventArgs e)
+        {
+            int orderId = int.Parse(txtOrId.Text);
+            CusOrderDetail cusOrderDetail = new CusOrderDetail(orderId);
+            cusOrderDetail.Show();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e) => Close();
+
+    }
+}

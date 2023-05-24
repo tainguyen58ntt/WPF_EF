@@ -1,0 +1,16 @@
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.AssemblyInfoInputs.cache
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.AssemblyInfo.cs
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\bin\Debug\net5.0\ClassLibrary1.deps.json
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\bin\Debug\net5.0\ClassLibrary1.runtimeconfig.json
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\bin\Debug\net5.0\ClassLibrary1.runtimeconfig.dev.json
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\bin\Debug\net5.0\ClassLibrary1.dll
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\bin\Debug\net5.0\ClassLibrary1.pdb
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.dll
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\refint\ClassLibrary1.dll
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.pdb
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ClassLibrary1.genruntimeconfig.cache
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\obj\Debug\net5.0\ref\ClassLibrary1.dll
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\ClassLibrary1\bin\Debug\net5.0\appsetting.json

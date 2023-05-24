@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "server =DESKTOP-58QEGCF; database=FUFlowerBouquetManagement;uid=sa2;pwd=1;"
+  }
+}

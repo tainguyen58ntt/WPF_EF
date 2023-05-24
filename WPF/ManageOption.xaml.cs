@@ -29,8 +29,23 @@ namespace WPF
         private void btn_ADCustomer(object sender, RoutedEventArgs e)
         {
             ICustomerRepository customerRepository = new CustomerRepository();
+            //AdCustomer adCustomer = new AdCustomer(customerRepository);
+            //adCustomer.Show();
+
+
             AdCustomer adCustomer = new AdCustomer(customerRepository);
-            adCustomer.Show();
+            adCustomer.Owner = this; // Set the parent window as the owner of the child window
+            adCustomer.Visibility = Visibility.Collapsed;
+            adCustomer.ShowDialog();
+
+
+            //this.Visibility = Visibility.Collapsed;
+            //AdCustomer adCustomer = new AdCustomer(customerRepository);
+            //adCustomer.Owner = this; // Set the parent window as the owner of the child window
+
+            //adCustomer.ShowDialog();
+            //this.Visibility = Visibility.Visible;
+
         }
 
         private void btn_ADFlower(object sender, RoutedEventArgs e)

@@ -48,6 +48,7 @@ namespace WPF
 
                 CusOrderDetail cusOrderDetail = new CusOrderDetail(orderId);
                 cusOrderDetail.Owner = this; // Set the parent window as the owner of the child window
+                cusOrderDetail.Visibility = Visibility.Collapsed;
                 cusOrderDetail.ShowDialog();
             }
 

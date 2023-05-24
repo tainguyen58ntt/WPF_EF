@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\App.xaml
-10-1367745970
+12-1151991064
 
-141293566411
+16474954089
 221-730571892
-AdCustomer.xaml;AdFlower.xaml;AdOrder.xaml;AdOrderDetail.xaml;Ad_Statistics.xaml;CusOrder.xaml;CusOrderDetail.xaml;CusView.xaml;MainWindow.xaml;ManageOption.xaml;
+AdFlower.xaml;AdOrder.xaml;AdOrderDetail.xaml;AD_Customer\AdCustomer.xaml;AD_Customer\ADInsertCus.xaml;AD_Customer\ADUpdateCus.xaml;Ad_Statistics.xaml;CusOrder.xaml;CusOrderDetail.xaml;CusView.xaml;MainWindow.xaml;ManageOption.xaml;
 
-True
+False
 

@@ -68,8 +68,6 @@ C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\bi
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\bin\Debug\net5.0-windows\appsetting.json
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\ManageOption.g.cs
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\ManageOption.baml
-C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdCustomer.g.cs
-C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdCustomer.baml
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdFlower.g.cs
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdFlower.baml
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdOrder.g.cs
@@ -84,3 +82,9 @@ C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\ob
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdOrderDetail.baml
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_Statistics.g.cs
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_Statistics.baml
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AD_Customer\AdCustomer.g.cs
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AD_Customer\AdCustomer.baml
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AD_Customer\ADInsertCus.g.cs
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AD_Customer\ADUpdateCus.g.cs
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AD_Customer\ADInsertCus.baml
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AD_Customer\ADUpdateCus.baml

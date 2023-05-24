@@ -7,16 +7,22 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AdCustomer.xaml.cs">
+    <Compile Update="AD_Customer\AdCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AdFlower.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AD_Customer\ADInsertCus.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AdOrder.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AdOrderDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AD_Customer\ADUpdateCus.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Ad_Statistics.xaml.cs">
@@ -36,16 +42,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AdCustomer.xaml">
+    <Page Update="AD_Customer\AdCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdFlower.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AD_Customer\ADInsertCus.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdOrder.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdOrderDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AD_Customer\ADUpdateCus.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ad_Statistics.xaml">

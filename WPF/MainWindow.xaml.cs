@@ -1,4 +1,5 @@
 ﻿using ClassLibrary.Repository;
+using ClassLibrary1.BussinessObject;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -51,8 +52,15 @@ namespace WPF
                 if (txtEmail.Equals(emailAdmin) && txtPassword.Equals(passwordAdmin))
                 {
                     MessageBox.Show("ok admin");
+                    //ManageOption manageOption = new ManageOption();
+                    //manageOption.Show();
+
+                    this.Visibility = Visibility.Collapsed;
                     ManageOption manageOption = new ManageOption();
-                    manageOption.Show();
+                    manageOption.Owner = this; // Set the parent window as the owner of the child window
+                    
+                    manageOption.ShowDialog();
+                    this.Visibility = Visibility.Visible;
                 }
                 else if (CustomerRepository.CheckLogin(txtEmail, txtPassword) != null)
                 {

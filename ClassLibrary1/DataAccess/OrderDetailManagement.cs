@@ -35,7 +35,7 @@ namespace ClassLibrary1.DataAccess
             try
             {
                 var myStockDB = new FUFlowerBouquetManagementContext();
-                orderDetails = (OrderDetail)myStockDB.OrderDetails.Where(od => od.OrderId == orderId && od.FlowerBouquetId == flId);
+                orderDetails =  myStockDB.OrderDetails.Single(o => o.OrderId == orderId && o.FlowerBouquetId == flId);  
             }
             catch (Exception ex)
             {
@@ -127,7 +127,7 @@ namespace ClassLibrary1.DataAccess
                 if (c != null)
                 {
                     var myStockDB = new FUFlowerBouquetManagementContext();
-                    myStockDB.Entry<OrderDetail>(c).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    myStockDB.Entry<OrderDetail>(orderDetail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                     myStockDB.SaveChanges();
                 }
                 else
@@ -170,3 +170,4 @@ namespace ClassLibrary1.DataAccess
     }
 }
 
+// check orderid exist and not have flid

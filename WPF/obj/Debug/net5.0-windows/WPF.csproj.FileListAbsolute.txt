@@ -82,3 +82,5 @@ C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\ob
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\CusOrderDetail.baml
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdOrderDetail.g.cs
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\AdOrderDetail.baml
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_Statistics.g.cs
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_Statistics.baml

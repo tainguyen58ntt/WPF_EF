@@ -137,5 +137,11 @@ namespace WPF
             AdOrderDetail adOrderDetail = new AdOrderDetail(int.Parse(txtOrId.Text));
             adOrderDetail.Show();   
         }
+
+        private void btnDStatistics_Click(object sender, RoutedEventArgs e)
+        {
+            Ad_Statistics ad_Statistics = new Ad_Statistics();
+            ad_Statistics.Show();
+        }
     }
 }

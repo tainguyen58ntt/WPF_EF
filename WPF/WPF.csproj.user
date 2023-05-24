@@ -19,6 +19,9 @@
     <Compile Update="AdOrderDetail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ad_Statistics.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CusOrder.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdOrderDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ad_Statistics.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CusOrder.xaml">

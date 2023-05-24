@@ -20,6 +20,11 @@ namespace ClassLibrary1.Repository
             return OrderManagement.Instance.GetOrders();    
         }
 
+        public List<Order> GetOrdersAfterFill(DateTime? startDate, DateTime? endDate)
+        {
+            return OrderManagement.Instance.GetOrdersByFill(startDate, endDate);
+        }
+
         public List<Order> GetOrdersByCustomerID(int customerID)
         {
             return OrderManagement.Instance.GetOrdersByCustomerID(customerID);

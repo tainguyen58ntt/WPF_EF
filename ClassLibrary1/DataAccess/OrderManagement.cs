@@ -57,6 +57,20 @@ namespace ClassLibrary1.DataAccess
             }
             return orders;
         }
+        public List<Order> GetOrdersByFill(DateTime? statDate, DateTime? endDate)
+        {
+            List<Order> orders;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                orders = myStockDB.Orders.Where(o => o.OrderDate <= endDate && o.OrderDate >= statDate).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return orders;
+        }
 
         public void Update(Order order)
         {

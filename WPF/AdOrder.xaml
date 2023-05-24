@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="AdOrder" Height="685" Width="1032">
+        Title="AdOrder" Height="951" Width="1405">
     <Grid Margin="196,10,137,23">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -31,10 +31,9 @@
             <TextBox Name="txtOrTotal" Height="25" Text="{Binding Path=Total, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbOrStatus" Content="[OrderStatus]"></Label>
             <TextBox Name="txtOrStatus" Height="25" Text="{Binding Path=OrderStatus, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
-            
+
         </StackPanel>
-        <StackPanel Orientation="Horizontal"
- HorizontalAlignment="Left" Margin="189,136,0,84">
+        <StackPanel Orientation="Horizontal" Margin="181,0,0,24" HorizontalAlignment="Left" Width="769">
             <Button x:Name="btnLoad" Margin="10" Width="80" Content="Load"
  Click="btnLoad_Click" Height="68"/>
             <Button x:Name="btnInsert" Margin="10" Width="80" Content="Insert"
@@ -44,9 +43,12 @@
             <Button x:Name="btnDelete" Margin="10" Width="80" Content="Delete"
  Click="btnDelete_Click" Height="65"/>
             <Button x:Name="btn_View_OrderDetail" Width="80" Content="View Order Detail"
-                Click="btn_AD_View_OrderDetail" Height="65"/>
+                Click="btn_AD_View_OrderDetail" Height="64"/>
+
         </StackPanel>
-        <ListView Grid.Row="1" Name="LvPro" Width="Auto" Height="Auto" Margin="0,74,-154,10" Grid.RowSpan="3"> 
+        <Button x:Name="btnStatistic" Width="80" Content="Statistics "
+                Click="btnDStatistics_Click" Height="65" Margin="423,208,569,59"/>
+        <ListView Grid.Row="1" Name="LvPro" Width="Auto" Height="Auto" Margin="0,74,-154,10" Grid.RowSpan="3">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="OrderId" Width="100" 
@@ -61,7 +63,7 @@
                                              DisplayMemberBinding="{Binding Path=Total}"/>
                     <GridViewColumn Header="OrderStatus" Width="100"
                                              DisplayMemberBinding="{Binding Path=OrderStatus}"/>
-                  
+
 
 
                 </GridView>

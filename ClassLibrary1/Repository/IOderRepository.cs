@@ -12,7 +12,7 @@ namespace ClassLibrary1.Repository
         List<Order> GetOrders();
         List<Order> GetOrdersByCustomerID(int customerID);
 
-
+        List<Order> GetOrdersAfterFill(DateTime? startDate, DateTime? endDate); 
         void InsertOrder(Order order);
         void Update(Order order);
         void DeleOrder(Order order);

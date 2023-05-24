@@ -25,18 +25,39 @@ namespace WPF
         {
             InitializeComponent();
             _oderRepository = oderRepository;
-
             LvPro.ItemsSource = _oderRepository.GetOrdersByCustomerID(cusId);
+
+
         }
 
         private void btn_View_OrderDetail_Click(object sender, RoutedEventArgs e)
         {
-            int orderId = int.Parse(txtOrId.Text);
-            CusOrderDetail cusOrderDetail = new CusOrderDetail(orderId);
-            cusOrderDetail.Show();
+            int orderId;
+            if (txtOrId.Text.Length == 0)
+            {
+                MessageBox.Show("Need to select row in table first");
+            }
+            else
+            {
+             orderId = int.Parse(txtOrId.Text);
+
+                //CusOrderDetail cusOrderDetail = new CusOrderDetail(orderId);
+                //this.Close();
+                //cusOrderDetail.Show();
+
+
+                CusOrderDetail cusOrderDetail = new CusOrderDetail(orderId);
+                cusOrderDetail.Owner = this; // Set the parent window as the owner of the child window
+                cusOrderDetail.ShowDialog();
+            }
+
+
+
         }
 
+
         private void btnClose_Click(object sender, RoutedEventArgs e) => Close();
+
 
     }
 }

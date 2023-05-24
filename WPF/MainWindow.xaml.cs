@@ -44,7 +44,7 @@ namespace WPF
 
             if (string.IsNullOrEmpty(txtEmail) || string.IsNullOrEmpty(txtPassword))  // check not null
             {
-                MessageBox.Show("nto null");
+                MessageBox.Show("Not empty, need to input Email and Password");
             }
             else
             {
@@ -56,8 +56,9 @@ namespace WPF
                 }
                 else if (CustomerRepository.CheckLogin(txtEmail, txtPassword) != null)
                 {
-                    MessageBox.Show("ok customer");
+                    MessageBox.Show("customer role");
                     CusView cusView = new CusView(CustomerRepository,CustomerRepository.CheckLogin(txtEmail,txtPassword));    
+                    this.Close();   
                     cusView.Show();
                     //CustomerView customerView = new CustomerView(); 
                     //customerView.Show();
@@ -66,7 +67,7 @@ namespace WPF
                 }
                 else
                 {
-                    MessageBox.Show("fail");
+                    MessageBox.Show("Incorrect Email or Password");
                 }
             }
         }

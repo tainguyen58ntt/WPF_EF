@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="CusOrderDetail" Height="709" Width="1020">
+        Title="CusOrderDetail" Height="711" Width="1120">
     <Grid Margin="196,10,137,23">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -18,17 +18,17 @@
             <Label Name="lbOrderInf"  Content="Order Information"></Label>
 
             <Label Name="lbOrderId" Content="[OrderId]"></Label>
-            <TextBox Name="txtOrderId" Height="25" Text="{Binding Path=OrderId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox IsReadOnly="True" Name="txtOrderId" Height="25" Text="{Binding Path=OrderId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbFlowerBouquetId" Content="[FlowerBouquetId]"></Label>
-            <TextBox Name="txtFlowerBouquetId" Height="25" Text="{Binding Path=FlowerBouquetId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox IsReadOnly="True" Name="txtFlowerBouquetId" Height="25" Text="{Binding Path=FlowerBouquetId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
             <Label Name="lbUnitPrice" Content="[UnitPrice]"></Label>
-            <TextBox Name="txtUnitPrice" Height="25" Text="{Binding Path=UnitPrice, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox IsReadOnly="True" Name="txtUnitPrice" Height="25" Text="{Binding Path=UnitPrice, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
             <Label Name="lbQuantity" Content="[Quantity]"></Label>
-            <TextBox Name="txtQuantity" Height="25" Text="{Binding Path=Quantity, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox IsReadOnly="True"  Name="txtQuantity" Height="25" Text="{Binding Path=Quantity, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbDiscount" Content="[Discount]"></Label>
-            <TextBox Name="txtDiscount" Height="25" Text="{Binding Path=Discount, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox IsReadOnly="True" Name="txtDiscount" Height="25" Text="{Binding Path=Discount, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Horizontal"

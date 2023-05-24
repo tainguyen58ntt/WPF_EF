@@ -25,7 +25,7 @@ namespace WPF
         private Customer _customerLogin;
         ICustomerRepository _customerRepository;
         IOderRepository oderRepository;
-        public CusView(ICustomerRepository customerRepository ,Customer customerLogin)
+        public CusView(ICustomerRepository customerRepository, Customer customerLogin)
         {
             InitializeComponent();
             _customerRepository = customerRepository;
@@ -36,6 +36,7 @@ namespace WPF
         private void LoadCustomerLogin()
         {
             txtCusId.Text = _customerLogin.CustomerId.ToString();
+
             txtCusEmail.Text = _customerLogin.Email.ToString();
             txtCusName.Text = _customerLogin.CustomerName.ToString();
             txtCusCity.Text = _customerLogin.City.ToString();
@@ -46,7 +47,7 @@ namespace WPF
 
         }
 
-       
+
         private Customer GetCustomerObject()
         {
             Customer customer = null;
@@ -76,10 +77,24 @@ namespace WPF
             try
             {
                 Customer customer = GetCustomerObject();
-                _customerRepository.Update(customer);
-                _customerLogin = customer;
-                LoadCustomerLogin();
-                MessageBox.Show($"{customer.CustomerName} updated successfully", "update pro");
+                if (customer.Email.Equals(""))
+                {
+                    MessageBox.Show($"Email not be empty, updated fail", "update Customer");
+                    LoadCustomerLogin();
+                }
+                else if(customer.Password.Equals(""))
+                {
+                    MessageBox.Show($"Password not be empty, updated fail", "update Customer");
+                    LoadCustomerLogin();
+                }
+                else
+                {
+                    _customerRepository.Update(customer);
+                    _customerLogin = customer;
+                    LoadCustomerLogin();
+                    MessageBox.Show($"{customer.CustomerName} updated successfully", "update Customer");
+
+                }
             }
             catch (Exception ex)
             {
@@ -87,17 +102,18 @@ namespace WPF
             }
         }
 
-       
-        private void btnClose_Click(object sender, RoutedEventArgs e) => Close();   
-       
 
-       
+        private void btnClose_Click(object sender, RoutedEventArgs e) => Close();
+
+
+
 
         private void btn_CusViewOrder_Click(object sender, RoutedEventArgs e)
         {
             IOderRepository oderRepository = new OrderRepository();
             int cusId = int.Parse(txtCusId.Text);
             CusOrder cusOrder = new CusOrder(oderRepository, cusId);
+            this.Close(); 
             cusOrder.Show();
         }
     }

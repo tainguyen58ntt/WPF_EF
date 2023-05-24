@@ -18,7 +18,7 @@
             <Label Name="lbTitle"  Content="Customer Information"></Label>
 
             <Label Name="lbCusId" Content="[CustomerID]"></Label>
-            <TextBox Name="txtCusId" Height="25" Text="{Binding Path=CustomerId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox IsReadOnly="True" Name="txtCusId" Height="25" Text="{Binding Path=CustomerId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
             <Label Name="lbCusEmail" Content="[Email]"></Label>
             <TextBox Name="txtCusEmail" Height="25" Text="{Binding Path=Email, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
@@ -32,16 +32,16 @@
             <Label Name="lbCusPassword" Content="[Password]"></Label>
             <TextBox Name="txtCusPassword" Height="25" Text="{Binding Path=Password, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbCusBirth" Content="[Birthday]"></Label>
-            <TextBox Name="txtCusBirth" Height="25" Text="{Binding Path=Birthday, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <DatePicker Name="txtCusBirth" Height="25" Text="{Binding Path=Birthday, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></DatePicker>
         </StackPanel>
         <StackPanel Orientation="Horizontal"
- HorizontalAlignment="Left" Margin="189,136,0,84">
+ HorizontalAlignment="Left" Margin="449,148,0,72">
             <Button x:Name="btnUpdate" Margin="10" Width="80" Content="Update"
  Click="btnUpdate_Click" Height="65"/>
             <Button x:Name="btn_CusViewOrder" Width="80" Content="View Order"
                 Click="btn_CusViewOrder_Click" Height="65" RenderTransformOrigin="2.49,0.6"/>
         </StackPanel>
-       
+
         <Button Grid.Row="3" x:Name="btnClose" Margin="10"
  HorizontalAlignment="Right" VerticalAlignment="Bottom"
  Width="80" Content="Close" Click="btnClose_Click" />

@@ -16,7 +16,8 @@ namespace ClassLibrary1.Repository
         void InsertOrder(Order order);
         void Update(Order order);
         void DeleOrder(Order order);
-        //void InserFlower(FlowerBouquet flowerBouquet);
+
+        Order GetObjectByOrId(Order order);
         ////void Update(Customer customer);
         //bool DeleteFlower(FlowerBouquet flowerBouquet);
     }

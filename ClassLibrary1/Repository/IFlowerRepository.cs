@@ -17,5 +17,7 @@ namespace ClassLibrary1.Repository
         void InserFlower(FlowerBouquet flowerBouquet);
         //void Update(Customer customer);
         bool DeleteFlower(FlowerBouquet flowerBouquet);
+        FlowerBouquet GetObjetByFlId(FlowerBouquet flowerBouquet);
+        void Update(FlowerBouquet flowerBouquet);
     }
 }

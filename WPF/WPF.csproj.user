@@ -10,19 +10,37 @@
     <Compile Update="AD_Customer\AdCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AdFlower.xaml.cs">
+    <Compile Update="AD_Flower\AdFlower.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AD_Customer\ADInsertCus.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AdOrder.xaml.cs">
+    <Compile Update="Ad_OrderDetail\ADInsertOrderDetail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AdOrderDetail.xaml.cs">
+    <Compile Update="Ad_Order\ADInsertOrder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ad_Order\AdOrder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ad_OrderDetail\AdOrderDetail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AD_Customer\ADUpdateCus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AD_Flower\ADInserFlo_V2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AD_Flower\ADInserFlo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AD_Flower\AdUpdateFlower.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ad_Order\AdUpdateOrder.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Ad_Statistics.xaml.cs">
@@ -45,19 +63,37 @@
     <Page Update="AD_Customer\AdCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="AdFlower.xaml">
+    <Page Update="AD_Flower\AdFlower.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AD_Customer\ADInsertCus.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="AdOrder.xaml">
+    <Page Update="Ad_OrderDetail\ADInsertOrderDetail.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="AdOrderDetail.xaml">
+    <Page Update="Ad_Order\ADInsertOrder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ad_Order\AdOrder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ad_OrderDetail\AdOrderDetail.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AD_Customer\ADUpdateCus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AD_Flower\ADInserFlo_V2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AD_Flower\ADInserFlo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AD_Flower\AdUpdateFlower.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ad_Order\AdUpdateOrder.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ad_Statistics.xaml">

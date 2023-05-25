@@ -26,7 +26,20 @@ namespace ClassLibrary1.DataAccess
                 }
             }
         }
-
+        public Order GetOrderByOrId(Order order)
+        {
+            Order _oder;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                _oder = myStockDB.Orders.SingleOrDefault(or => or.OrderId == order.OrderId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return _oder;
+        }
         //    //using singleton pattern
         //    ///
         public List<Order> GetOrdersByCustomerID(int customerID)
@@ -76,17 +89,17 @@ namespace ClassLibrary1.DataAccess
         {
             try
             {
-                Order c = GetByID(order.OrderId);
-                if (c != null)
-                {
-                    var myStockDB = new FUFlowerBouquetManagementContext();
-                    myStockDB.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    myStockDB.SaveChanges();
-                }
-                else
-                {
-                    throw new Exception("The order does not already exist");
-                }
+                //FlowerBouquet c = GetByID(flowerBouquet.CustomerId);
+                //if (c != null)
+                //{
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                myStockDB.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                myStockDB.SaveChanges();
+                //}
+                //else
+                //{
+                //    throw new Exception("The customer does not already exist");
+                //}
             }
             catch (Exception ex)
             {

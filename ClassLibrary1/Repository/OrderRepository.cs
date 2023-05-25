@@ -15,6 +15,11 @@ namespace ClassLibrary1.Repository
             OrderManagement.Instance.Remmove(order);    
         }
 
+        public Order GetObjectByOrId(Order order)
+        {
+            return OrderManagement.Instance.GetOrderByOrId(order);
+        }
+
         public List<Order> GetOrders()
         {
             return OrderManagement.Instance.GetOrders();    

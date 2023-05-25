@@ -79,26 +79,49 @@ namespace WPF
 
        
     }
-        private Customer GetCustomerObject()
+        private Customer GetCustomer()
         {
             Customer customer = null;
-            DateTime? selectedDate = dbBirth.SelectedDate;
-            DateTime defaultBirthday = new DateTime(2002, 1, 1);
-
-            DateTime customerBirthday = selectedDate ?? defaultBirthday;
+            bool checkId = int.TryParse(txtCusId.Text, out int id);
+            //bool checkPrie = decimal.TryParse(txtFlPrice.Text, out decimal price);
+            //bool checkUnitStock = byte.TryParse(txtFlUnitStock.Text, out byte unitStock);
+            //bool checkStatus = byte.TryParse(txtFlStatus.Text, out byte status);
             try
             {
-                customer = new Customer
+
+                //if (checkPrie == false)
+                //{
+                //    MessageBox.Show("price need to be a  decimal");
+                //}
+                //if (checkUnitStock == false)
+                //{
+                //    MessageBox.Show("unitStock need to be a int ");
+                //}
+                //if (checkStatus == false && status != 0 && status != 1)
+                //{
+                //    MessageBox.Show("status need to be a number 1 or 0");
+                //}
+
+
+                customer = new Customer()
                 {
-                    CustomerId = int.Parse(txtCusId.Text),
+                    CustomerId = id,
+
                     Email = txtCusEmail.Text,
                     CustomerName = txtCusName.Text,
                     City = txtCusCity.Text,
                     Country = txtCusCountry.Text,
                     Password = txtCusPassword.Text,
-                    Birthday = customerBirthday
+                    Birthday = DateTime.Parse(dbBirth.Text),
+
 
                 };
+
+
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -111,18 +134,22 @@ namespace WPF
         {
 
 
-            //try
-            //{
-            //    Customer customer = GetCustomerObject();
-            //    _customerRepository.Update(customer);
+            bool checkValid = checkAllValid();
+            if (checkValid)
+            {
+                try
+                {
+                    Customer customer = GetCustomer();
+                    _customerRepository.Update(customer);
 
-            //    MessageBox.Show($"{customer.CustomerName} updated successfully", "update pro");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "update pro");
-            //}
-          
+                    MessageBox.Show($"{customer.CustomerName} updated successfully", "update customer");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "update customer");
+                }
+            }
+
         }
     }
 }

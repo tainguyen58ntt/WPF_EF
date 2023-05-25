@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF.Ad_Order;
 
 namespace WPF
 {
@@ -226,11 +227,35 @@ namespace WPF
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if (txtCusId.Text.Length > 0)
-            {
-                MessageBoxResult result = MessageBox.Show("Do you want to bring record you select to update ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            //if (txtCusId.Text.Length > 0)
+            //{
+            //    MessageBoxResult result = MessageBox.Show("Do you want to bring record you select to update ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-                if (result == MessageBoxResult.Yes)
+            //    if (result == MessageBoxResult.Yes)
+            //    {
+            //        Customer customer = GetCustomerObject();
+            //        if (customer != null)
+            //        {
+            //            //_customerRepository.DeleteProduct(customer);
+            //            //LoadCusList();
+            //            //MessageBox.Show($"{customer.CustomerName} delete successfully", "delete pro");
+            //            ADUpdateCus childWindow = new ADUpdateCus(customer);
+            //            childWindow.Owner = this; // Set the parent window as the owner of the child window
+            //            childWindow.ShowDialog();
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    ADUpdateCus childWindow = new ADUpdateCus();
+            //    childWindow.Owner = this; // Set the parent window as the owner of the child window
+            //    childWindow.ShowDialog();
+            //}
+
+            try
+            {
+                string check = txtCusId.Text;
+                if (check.Length != 0)
                 {
                     Customer customer = GetCustomerObject();
                     if (customer != null)
@@ -243,12 +268,16 @@ namespace WPF
                         childWindow.ShowDialog();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Select record to update");
+                }
+
+
             }
-            else
+            catch (Exception ex)
             {
-                ADUpdateCus childWindow = new ADUpdateCus();
-                childWindow.Owner = this; // Set the parent window as the owner of the child window
-                childWindow.ShowDialog();
+                MessageBox.Show(ex.Message, "update customer");
             }
         }
 

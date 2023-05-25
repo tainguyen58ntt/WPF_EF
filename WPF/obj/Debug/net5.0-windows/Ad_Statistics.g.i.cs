@@ -101,7 +101,7 @@ namespace WPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF;component/ad_statistics.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NguyenThanhTai_WPF;component/ad_statistics.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Ad_Statistics.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

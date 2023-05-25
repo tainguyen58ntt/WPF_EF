@@ -173,7 +173,7 @@ namespace WPF.Ad_Order {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF;component/ad_order/adupdateorder.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NguyenThanhTai_WPF;component/ad_order/adupdateorder.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Ad_Order\AdUpdateOrder.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

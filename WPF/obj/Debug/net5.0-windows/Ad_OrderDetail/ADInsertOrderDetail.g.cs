@@ -149,7 +149,7 @@ namespace WPF.Ad_OrderDetail {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF;component/ad_orderdetail/adinsertorderdetail.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NguyenThanhTai_WPF;component/ad_orderdetail/adinsertorderdetail.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Ad_OrderDetail\ADInsertOrderDetail.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

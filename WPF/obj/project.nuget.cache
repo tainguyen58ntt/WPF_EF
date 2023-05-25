@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8wwY5U7gE6iLAqmYcbJJ30Z11Tz9HD2NfOjDxfflu6QBYn5VsiEoSVebIVXDwSu9/kr8Z5wvAVkrOZZmE+l8mg==",
+  "dgSpecHash": "puSc+b/rq+3sq1F4dL8EQYvPPPPyS6+lCO68Wb1xtRiAHRM8epslMcg2zwDwei+D2jXEPFTiKj27LRTIuV9BTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\WPF.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\NguyenThanhTai_WPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\extended.wpf.toolkit\\4.5.0\\extended.wpf.toolkit.4.5.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

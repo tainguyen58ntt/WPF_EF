@@ -197,7 +197,7 @@ namespace WPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF;component/cusview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NguyenThanhTai_WPF;component/cusview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CusView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

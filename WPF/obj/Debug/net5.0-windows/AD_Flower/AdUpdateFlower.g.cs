@@ -189,7 +189,7 @@ namespace WPF.AD_Flower {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF;component/ad_flower/adupdateflower.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NguyenThanhTai_WPF;component/ad_flower/adupdateflower.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\AD_Flower\AdUpdateFlower.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

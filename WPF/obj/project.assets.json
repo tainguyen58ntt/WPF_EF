@@ -6293,9 +6293,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\WPF.csproj",
-      "projectName": "WPF",
-      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\WPF.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\NguyenThanhTai_WPF.csproj",
+      "projectName": "NguyenThanhTai_WPF",
+      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\NguyenThanhTai_WPF.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\PRN_ASS1_1001\\NguyenThanhTai_SE1605_A01\\WPF\\obj\\",
       "projectStyle": "PackageReference",

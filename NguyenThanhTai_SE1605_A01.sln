@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{0FAF6A9F-E3E7-485A-9F85-E23151064122}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF", "WPF\WPF.csproj", "{C3452BC7-B10E-41BE-B09E-F3793F67F80B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NguyenThanhTai_WPF", "WPF\NguyenThanhTai_WPF.csproj", "{C3452BC7-B10E-41BE-B09E-F3793F67F80B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

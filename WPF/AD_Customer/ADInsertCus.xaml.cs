@@ -27,26 +27,111 @@ namespace WPF
             InitializeComponent();
             _customerRepository = new CustomerRepository(); 
         }
-        private Customer GetCustomerObject()
+
+        private bool checkAllValid()
+        {
+            // check id
+            string mess = "";
+            bool checkId = int.TryParse(txtCusId.Text, out int id);
+            if (checkId == false)
+            {
+                mess = "id need to be int";
+                MessageBox.Show(mess);
+                return false;
+            }
+       
+         
+
+            DateTime? checkDbOrDate = dbBirth.SelectedDate;
+
+            if (!checkDbOrDate.HasValue)
+            {
+                //DateTime dateValue = checkDbOrDate.Value;
+                //Console.WriteLine(dateValue);
+                mess = "Birth date need to be selected";
+                MessageBox.Show(mess);
+                return false;
+            }
+
+          
+            return true;
+        }
+
+        private bool checkDuplicateId(Customer customer)
+        {
+            Customer cus = _customerRepository.GetCustomerById(customer);
+            if (cus != null)
+            {
+                return false;
+            }
+            return true;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool checkValid = checkAllValid();
+            if (checkValid)
+            {
+
+                Customer customer = GetCustomer();
+                bool check = checkDuplicateId(customer);
+                if (check == true)
+                {
+                    _customerRepository.InsertCustomer(customer);
+                    MessageBox.Show("insert customer success");
+
+                }
+                else
+                {
+                    MessageBox.Show("aldread have customer with that id");
+
+                }
+            }
+
+        }
+
+        private Customer GetCustomer()
         {
             Customer customer = null;
-            DateTime? selectedDate = dbBirth.SelectedDate;
-            DateTime defaultBirthday = new DateTime(2002, 1, 1);
-
-            DateTime customerBirthday = selectedDate ?? defaultBirthday;
+            bool checkId = int.TryParse(txtCusId.Text, out int id);
+            //bool checkPrie = decimal.TryParse(txtFlPrice.Text, out decimal price);
+            //bool checkUnitStock = byte.TryParse(txtFlUnitStock.Text, out byte unitStock);
+            //bool checkStatus = byte.TryParse(txtFlStatus.Text, out byte status);
             try
             {
-                customer = new Customer
-                {
-                    CustomerId = int.Parse(txtCusId.Text),
-                    Email = txtCusEmail.Text,
-                    CustomerName = txtCusName.Text,
-                    City = txtCusCity.Text,
-                    Country = txtCusCountry.Text,
-                    Password = txtCusPassword.Text,
-                    Birthday = customerBirthday
+              
+                //if (checkPrie == false)
+                //{
+                //    MessageBox.Show("price need to be a  decimal");
+                //}
+                //if (checkUnitStock == false)
+                //{
+                //    MessageBox.Show("unitStock need to be a int ");
+                //}
+                //if (checkStatus == false && status != 0 && status != 1)
+                //{
+                //    MessageBox.Show("status need to be a number 1 or 0");
+                //}
+             
 
-                };
+                    customer = new Customer()
+                    {
+                        CustomerId = id,
+
+                        Email = txtCusEmail.Text,
+                        CustomerName = txtCusName.Text,
+                        City = txtCusCity.Text,
+                        Country = txtCusCountry.Text,
+                        Password = txtCusPassword.Text,
+                        Birthday = DateTime.Parse(dbBirth.Text),
+                        
+
+                    };
+
+                
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -56,55 +141,7 @@ namespace WPF
             return customer;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(txtCusId.Text))
-                {
-                    MessageBox.Show("Need to input Customer Id");
-                }
-                else
-                {
-                    if (!dbBirth.SelectedDate.HasValue)
-                    {
-
-                        MessageBoxResult result = MessageBox.Show("Set default birthday (2002/1/1) ", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-                        if (result == MessageBoxResult.Yes)
-                        {
-                            // User clicked Yes
-                            Customer customer = GetCustomerObject();
-
-                            _customerRepository.InsertCustomer(customer);
-                            //LoadCusList();
-                            MessageBox.Show($"{customer.CustomerName} inserted successfully", "insert Cus");
-                            // Perform your desired actions
-                        }
-                        else
-                        {
-                            // User clicked No or closed the message box
-                            // Perform other actions
-                            MessageBox.Show("Input your birthday");
-                        }
-                        //Customer customer = GetCustomerObject();
-
-                        //_customerRepository.InsertCustomer(customer);
-                        //LoadCusList();
-                        //MessageBox.Show($"{customer.CustomerName} inserted successfully", "insert Cus");
-
-                    }
 
 
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "insert Cus");
-            }
-
-        }
     }
 }

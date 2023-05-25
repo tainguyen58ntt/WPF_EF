@@ -19,5 +19,7 @@ namespace ClassLibrary.Repository
         void InsertCustomer(Customer customer);
         void Update(Customer customer);
         void DeleteProduct(Customer cus);
+        List<Customer> GetCustomersByEmail(string email);
+        Customer GetCustomerById(Customer customer);
     }
 }

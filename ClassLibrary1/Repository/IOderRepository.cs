@@ -15,9 +15,14 @@ namespace ClassLibrary1.Repository
         List<Order> GetOrdersAfterFill(DateTime? startDate, DateTime? endDate); 
         void InsertOrder(Order order);
         void Update(Order order);
+
+        void UpdateTotalPrice(int orderId, decimal total);
         void DeleOrder(Order order);
 
         Order GetObjectByOrId(Order order);
+        Order GetObjectByOrId(int orderId);
+
+
         ////void Update(Customer customer);
         //bool DeleteFlower(FlowerBouquet flowerBouquet);
     }

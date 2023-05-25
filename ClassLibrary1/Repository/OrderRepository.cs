@@ -19,7 +19,10 @@ namespace ClassLibrary1.Repository
         {
             return OrderManagement.Instance.GetOrderByOrId(order);
         }
-
+        public Order GetObjectByOrId(int orderId)
+        {
+            return OrderManagement.Instance.GetByID(orderId);
+        }
         public List<Order> GetOrders()
         {
             return OrderManagement.Instance.GetOrders();    
@@ -43,6 +46,15 @@ namespace ClassLibrary1.Repository
         public void Update(Order order)
         {
             OrderManagement.Instance.Update(order); 
+        }
+
+        public void UpdateTotalPrice(int orderId, decimal total)
+        {
+            Order order = OrderManagement.Instance.GetByID(orderId);
+            order.Total = total; 
+            
+
+
         }
     }
 }

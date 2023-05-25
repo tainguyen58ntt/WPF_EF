@@ -28,6 +28,16 @@ namespace ClassLibrary.Repository
             return CustomerManagement.Instance.GetCustomers();
         }
 
+        public Customer GetCustomerById(Customer customer)
+        {
+            return CustomerManagement.Instance.GetByID(customer.CustomerId);
+        }
+
+        public List<Customer> GetCustomersByEmail(string email)
+        {
+            return CustomerManagement.Instance.GetCustomerByEmail(email);
+        }
+
         public void InsertCustomer(Customer customer) => CustomerManagement.Instance.AddNew(customer);
 
 

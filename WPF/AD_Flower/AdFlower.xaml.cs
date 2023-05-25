@@ -206,5 +206,14 @@ namespace WPF
 
         private void btnClose_Click(object sender, RoutedEventArgs e) => Close();
 
+        public void LoadFLListByName()
+        {
+            LvPro.ItemsSource = _flower.GetFlowerBouquetsByName(txtSearchByName.Text);
+        }
+
+        private void btnSearchName_click(object sender, RoutedEventArgs e)
+        {
+            LoadFLListByName();
+        }
     }
 }

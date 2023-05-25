@@ -71,6 +71,20 @@ namespace ClassLibrary1.DataAccess
         }
         //    //using singleton pattern
         //    ///
+        public List<FlowerBouquet> GetFlowerBouquetsByName(string name)
+        {
+            List<FlowerBouquet> flowerBouquets;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                flowerBouquets = myStockDB.FlowerBouquets.Where(fl => fl.FlowerBouquetName.Contains(name)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return flowerBouquets;
+        }
         public List<FlowerBouquet> GetFlowerBouquets()
         {
             List<FlowerBouquet> flowerBouquets;

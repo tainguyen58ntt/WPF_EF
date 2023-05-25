@@ -36,8 +36,8 @@
         <StackPanel Orientation="Horizontal"
  HorizontalAlignment="Left" Margin="189,136,0,84">
 
-            <Button x:Name="btn_View_OrderDetail" Width="138" Content="View Order Detail"
-                Click="btn_View_OrderDetail_Click" Height="65" />
+            <Button x:Name="btn_View_OrderDetail" Width="108" Content="View Order Detail"
+                Click="btn_View_OrderDetail_Click" Height="41" />
         </StackPanel>
         <ListView Grid.Row="1" Name="LvPro" Width="Auto" Height="Auto" Margin="0,74,-154,10" Grid.RowSpan="3">
             <ListView.View>
@@ -63,6 +63,8 @@
         <Button Grid.Row="3" x:Name="btnClose" Margin="10"
  HorizontalAlignment="Right" VerticalAlignment="Bottom"
  Width="80" Content="Close" Click="btnClose_Click" />
+     
+
 
 
 

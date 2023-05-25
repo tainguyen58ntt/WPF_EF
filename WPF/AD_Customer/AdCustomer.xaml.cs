@@ -102,7 +102,7 @@ namespace WPF
             //{
             //    MessageBox.Show(ex.Message, "insert Cus");
             //}
-            
+
 
 
             // Creating and showing the child window
@@ -189,7 +189,7 @@ namespace WPF
             try
             {
                 string check = txtCusId.Text;
-                if(check.Length != 0)
+                if (check.Length != 0)
                 {
                     MessageBoxResult result = MessageBox.Show("Do you want to delete?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
@@ -213,7 +213,7 @@ namespace WPF
                 {
                     MessageBox.Show("Select record to delete");
                 }
-              
+
 
             }
             catch (Exception ex)
@@ -226,7 +226,7 @@ namespace WPF
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if(txtCusId.Text.Length > 0)
+            if (txtCusId.Text.Length > 0)
             {
                 MessageBoxResult result = MessageBox.Show("Do you want to bring record you select to update ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
@@ -250,6 +250,17 @@ namespace WPF
                 childWindow.Owner = this; // Set the parent window as the owner of the child window
                 childWindow.ShowDialog();
             }
+        }
+
+        public void LoadCusListByEmail()
+        {
+
+            LvPro.ItemsSource = _customerRepository.GetCustomersByEmail(txtEmailSearch.Text);
+        }
+
+        private void btnSearchEmail_click(object sender, RoutedEventArgs e)
+        {
+            LoadCusListByEmail();
         }
     }
 }

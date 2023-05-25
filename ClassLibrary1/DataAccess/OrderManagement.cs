@@ -76,7 +76,7 @@ namespace ClassLibrary1.DataAccess
             try
             {
                 var myStockDB = new FUFlowerBouquetManagementContext();
-                orders = myStockDB.Orders.Where(o => o.OrderDate <= endDate && o.OrderDate >= statDate).ToList();
+                orders = myStockDB.Orders.Where(o => o.OrderDate <= endDate && o.OrderDate >= statDate).OrderByDescending(o => o.Total).ToList();
             }
             catch (Exception ex)
             {
@@ -84,7 +84,27 @@ namespace ClassLibrary1.DataAccess
             }
             return orders;
         }
-
+        public void UpdateTotal(Order order)
+        {
+            try
+            {
+                //FlowerBouquet c = GetByID(flowerBouquet.CustomerId);
+                //if (c != null)
+                //{
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                myStockDB.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                myStockDB.SaveChanges();
+                //}
+                //else
+                //{
+                //    throw new Exception("The customer does not already exist");
+                //}
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public void Update(Order order)
         {
             try
@@ -184,6 +204,8 @@ namespace ClassLibrary1.DataAccess
             }
             return order;
         }
+
+
         ////
 
         //public void AddNew(FlowerBouquet flowerBouquet)

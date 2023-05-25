@@ -24,13 +24,13 @@
             <TextBox IsReadOnly="True" Name="txtOrCusId" Height="25" Text="{Binding Path=CustomerId, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
             <Label Name="lbOrDate" Content="[OrderDate]"></Label>
-            <TextBox IsReadOnly="True" Name="txtOrDate" Height="25" Text="{Binding Path=OrderDate, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox Name="txtOrDate" Height="25" Text="{Binding Path=OrderDate, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbShipDate" Content="[ShippedDate]"></Label>
-            <TextBox IsReadOnly="True" Name="txtShipDate" Height="25" Text="{Binding Path=ShippedDate, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox Name="txtShipDate" Height="25" Text="{Binding Path=ShippedDate, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbOrTotal" Content="[Total]"></Label>
-            <TextBox IsReadOnly="True" Name="txtOrTotal" Height="25" Text="{Binding Path=Total, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox Name="txtOrTotal" Height="25" Text="{Binding Path=Total, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbOrStatus" Content="[OrderStatus]"></Label>
-            <TextBox  Name="txtOrStatus" Height="25" Text="{Binding Path=OrderStatus, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox Name="txtOrStatus" Height="25" Text="{Binding Path=OrderStatus, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="181,0,0,24" HorizontalAlignment="Left" Width="769">
@@ -47,7 +47,7 @@
 
         </StackPanel>
         <Button x:Name="btnStatistic" Width="80" Content="Statistics "
-                Click="btnDStatistics_Click" Height="65" Margin="423,208,569,59"/>
+                Click="btnDStatistics_Click" Height="65" Margin="441,213,551,79"/>
         <ListView Grid.Row="1" Name="LvPro" Width="Auto" Height="Auto" Margin="0,74,-154,10" Grid.RowSpan="3">
             <ListView.View>
                 <GridView>
@@ -72,6 +72,7 @@
         <Button Grid.Row="3" x:Name="btnClose" Margin="10"
  HorizontalAlignment="Right" VerticalAlignment="Bottom"
  Width="80" Content="Close" Click="btnClose_Click" />
+        <TextBlock HorizontalAlignment="Left" Margin="1257,213,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
 
 

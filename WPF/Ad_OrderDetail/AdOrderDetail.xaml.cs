@@ -30,7 +30,8 @@ namespace WPF
         {
             InitializeComponent();
             _orderDetailRepository = new OrderDetailRepository();
-            _orderId  = orderId;    
+            _orderId  = orderId;
+            _oderRepository = new OrderRepository();
             LvPro.ItemsSource = GetOrderDetailsByOrderId(orderId);
         }
         public void LoadOrderDetail()
@@ -75,33 +76,124 @@ namespace WPF
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            //try
+            //{
+            //    OrderDetail orderDetail = GetOrderDetail();
+            //    _orderDetailRepository.Update(orderDetail);
+            //    LoadOrderDetail();
+            //    MessageBox.Show($"{orderDetail.OrderId} updated successfully", "update pro");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "update pro");
+            //}
             try
             {
-                OrderDetail orderDetail = GetOrderDetail();
-                _orderDetailRepository.Update(orderDetail);
-                LoadOrderDetail();
-                MessageBox.Show($"{orderDetail.OrderId} updated successfully", "update pro");
+                string check = txtOrderId.Text;
+                if (check.Length != 0)
+                {
+                    OrderDetail orderDetail = GetOrderDetail();
+                    if (orderDetail != null)
+                    {
+                        //_customerRepository.DeleteProduct(customer);
+                        //LoadCusList();
+                        //MessageBox.Show($"{customer.CustomerName} delete successfully", "delete pro");
+                        AdUpdateOrdetail childWindow = new AdUpdateOrdetail(orderDetail);
+                        childWindow.Owner = this; // Set the parent window as the owner of the child window
+                        childWindow.ShowDialog();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Select record to update");
+                }
+
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "update pro");
+                MessageBox.Show(ex.Message, "update flo");
             }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            try
+            //try
+            //{
+            //    OrderDetail orderDetail = GetOrderDetail();
+            //    _orderDetailRepository.DeleteOrderDetail(orderDetail);
+            //    LoadOrderDetail();
+            //    MessageBox.Show($"{orderDetail.OrderId} delete successfully", "delete orderdetail");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "delete ordertail");
+            //}
+            if (txtOrderId.Text.Length != 0)
             {
-                OrderDetail orderDetail = GetOrderDetail();
-                _orderDetailRepository.DeleteOrderDetail(orderDetail);
-                LoadOrderDetail();
-                MessageBox.Show($"{orderDetail.OrderId} delete successfully", "delete orderdetail");
+                MessageBoxResult result = MessageBox.Show("Do you want to delete?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+
+                    try
+                    {
+                        OrderDetail orderDetail = GetOrderDetail();
+                        int orderId = orderDetail.OrderId;
+                        _orderDetailRepository.DeleteOrderDetail(orderDetail);
+
+                        // update total 
+                        //orderRepository.GetObjectByOrId(orderId);
+                        decimal totalUpdate = GetTotalByOrderId(orderId);
+
+
+                        Order order = _oderRepository.GetObjectByOrId(orderId);
+                        order.Total = totalUpdate;
+                        _oderRepository.Update(order);
+
+                        // update total
+
+                        LoadOrderDetail();
+                        MessageBox.Show($"{orderDetail.OrderId} delete successfully", "delete pro");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "delete pro");
+                    }
+                }
+
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "delete ordertail");
+                MessageBox.Show("Select record to delete  order");
             }
         }
+        public decimal GetTotalByOrderId(int _orderId)
+        {
+            return _orderDetailRepository.GetTotalSumOrderDetail(_orderId);
+        }
+        //private OrderDetail GetOrderDetail()
+        //{
+        //    OrderDetail orderDetail = null;
+        //    try
+        //    {
+        //        orderDetail = new OrderDetail()
+        //        {
+        //            OrderId = int.Parse(txtOrderId.Text),
+        //            FlowerBouquetId = int.Parse(txtFlowerBouquetId.Text),
+        //            UnitPrice = decimal.Parse(txtUnitPrice.Text),
+        //            Quantity = int.Parse(txtQuantity.Text),
+        //            Discount = int.Parse(txtDiscount.Text),
+
+
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Get OrderDetail");
+
+        //    }
+        //    return orderDetail;
+        //}
         private OrderDetail GetOrderDetail()
         {
             OrderDetail orderDetail = null;
@@ -114,7 +206,7 @@ namespace WPF
                     UnitPrice = decimal.Parse(txtUnitPrice.Text),
                     Quantity = int.Parse(txtQuantity.Text),
                     Discount = int.Parse(txtDiscount.Text),
-                   
+
 
                 };
             }

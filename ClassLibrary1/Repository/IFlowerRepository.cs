@@ -19,5 +19,6 @@ namespace ClassLibrary1.Repository
         bool DeleteFlower(FlowerBouquet flowerBouquet);
         FlowerBouquet GetObjetByFlId(FlowerBouquet flowerBouquet);
         void Update(FlowerBouquet flowerBouquet);
+        List<FlowerBouquet> GetFlowerBouquetsByName(string name);
     }
 }

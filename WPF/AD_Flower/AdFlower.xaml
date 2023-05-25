@@ -74,6 +74,8 @@
         <Button Grid.Row="3" x:Name="btnClose" Margin="10"
  HorizontalAlignment="Right" VerticalAlignment="Bottom"
  Width="80" Content="Close" Click="btnClose_Click" />
+        <Button Content="Search FlowerBouquet By Name" Click="btnSearchName_click" HorizontalAlignment="Left" Margin="380,350,0,0" VerticalAlignment="Top" Height="23" Width="185"/>
+        <TextBox x:Name="txtSearchByName" HorizontalAlignment="Left" Margin="380,393,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
 
 

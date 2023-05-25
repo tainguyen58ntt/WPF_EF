@@ -19,6 +19,9 @@
     <Compile Update="Ad_OrderDetail\ADInsertOrderDetail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ad_OrderDetail\AdUpdateOrdetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ad_Order\ADInsertOrder.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ad_OrderDetail\ADInsertOrderDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ad_OrderDetail\AdUpdateOrdetail.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ad_Order\ADInsertOrder.xaml">

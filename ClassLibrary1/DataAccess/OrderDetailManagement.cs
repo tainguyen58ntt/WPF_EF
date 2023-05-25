@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xceed.Wpf.Toolkit;
 
 namespace ClassLibrary1.DataAccess
 {
@@ -31,11 +32,11 @@ namespace ClassLibrary1.DataAccess
 
         public OrderDetail GetOrdersDetailByOrderIdAndFlId(int orderId, int flId)
         {
-           OrderDetail orderDetails;
+            OrderDetail orderDetails;
             try
             {
                 var myStockDB = new FUFlowerBouquetManagementContext();
-                orderDetails =  myStockDB.OrderDetails.Single(o => o.OrderId == orderId && o.FlowerBouquetId == flId);  
+                orderDetails = myStockDB.OrderDetails.SingleOrDefault(o => o.OrderId == orderId && o.FlowerBouquetId == flId);
             }
             catch (Exception ex)
             {
@@ -65,10 +66,10 @@ namespace ClassLibrary1.DataAccess
                 if (orderDetail1 != null)
                 {
                     var myStockDB = new FUFlowerBouquetManagementContext();
-             
+
                     myStockDB.OrderDetails.Remove(orderDetail1);
 
-                    
+
                     myStockDB.SaveChanges();
                 }
                 else
@@ -118,22 +119,39 @@ namespace ClassLibrary1.DataAccess
             return orderDetail;
         }
 
+        public decimal GetTotalBy(int orderdetailId)
+        {
+            decimal total = 0;
+            int _quantity = 0;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                total = myStockDB.OrderDetails.Where(o => o.OrderId == orderdetailId).Sum(od => od.Quantity * od.UnitPrice);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return total;
+        }
+
 
         public void Update(OrderDetail orderDetail)
         {
             try
             {
-                OrderDetail c = GetOrdersDetailByOrderIdAndFlId(orderDetail.OrderId, orderDetail.FlowerBouquetId);
-                if (c != null)
-                {
-                    var myStockDB = new FUFlowerBouquetManagementContext();
-                    myStockDB.Entry<OrderDetail>(orderDetail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    myStockDB.SaveChanges();
-                }
-                else
-                {
-                    throw new Exception("The customer does not already exist");
-                }
+                //OrderDetail c = GetOrdersDetailByOrderIdAndFlId(orderDetail.OrderId, orderDetail.FlowerBouquetId);
+                //if (c != null)
+                //{
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                myStockDB.Entry<OrderDetail>(orderDetail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                myStockDB.SaveChanges();
+                
+                //}
+                //else
+                //{
+                //    throw new Exception("The customer does already exist");
+                //}
             }
             catch (Exception ex)
             {
@@ -153,7 +171,7 @@ namespace ClassLibrary1.DataAccess
                 if (_orderDetail == null)
                 {
                     var myStockDB = new FUFlowerBouquetManagementContext();
-                    myStockDB.OrderDetails.Add(_orderDetail);
+                    myStockDB.OrderDetails.Add(orderDetail);
                     myStockDB.SaveChanges();
                 }
                 else

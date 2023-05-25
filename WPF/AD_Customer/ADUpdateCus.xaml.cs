@@ -36,6 +36,35 @@ namespace WPF
             AttachToTextBox();
         }
 
+
+        private bool checkAllValid()
+        {
+            // check id
+            string mess = "";
+            bool checkId = int.TryParse(txtCusId.Text, out int id);
+            if (checkId == false)
+            {
+                mess = "id need to be int";
+                MessageBox.Show(mess);
+                return false;
+            }
+
+
+
+            DateTime? checkDbOrDate = dbBirth.SelectedDate;
+
+            if (!checkDbOrDate.HasValue)
+            {
+                //DateTime dateValue = checkDbOrDate.Value;
+                //Console.WriteLine(dateValue);
+                mess = "Birth date need to be selected";
+                MessageBox.Show(mess);
+                return false;
+            }
+
+
+            return true;
+        }
         private void AttachToTextBox()
         {
             txtCusId.Text = _customer.CustomerId.ToString();
@@ -80,64 +109,20 @@ namespace WPF
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+
             //try
             //{
-            //    if (string.IsNullOrEmpty(txtCusId.Text))
-            //    {
-            //        MessageBox.Show("Need to input Customer Id");
-            //    }
-            //    else
-            //    {
-            //        if (!dbBirth.SelectedDate.HasValue)
-            //        {
+            //    Customer customer = GetCustomerObject();
+            //    _customerRepository.Update(customer);
 
-            //            MessageBoxResult result = MessageBox.Show("Set default birthday (2002/1/1) ", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-            //            if (result == MessageBoxResult.Yes)
-            //            {
-            //                // User clicked Yes
-            //                Customer customer = GetCustomerObject();
-
-            //                _customerRepository.InsertCustomer(customer);
-
-            //                MessageBox.Show($"{customer.CustomerName} inserted successfully", "insert Cus");
-            //                // Perform your desired actions
-            //            }
-            //            else
-            //            {
-            //                // User clicked No or closed the message box
-            //                // Perform other actions
-            //                MessageBox.Show("Input your birthday");
-            //            }
-            //            //Customer customer = GetCustomerObject();
-
-            //            //_customerRepository.InsertCustomer(customer);
-            //            //LoadCusList();
-            //            //MessageBox.Show($"{customer.CustomerName} inserted successfully", "insert Cus");
-
-            //        }
-
-
-
-
-            //    }
+            //    MessageBox.Show($"{customer.CustomerName} updated successfully", "update pro");
             //}
             //catch (Exception ex)
             //{
-            //    MessageBox.Show(ex.Message, "insert Cus");
+            //    MessageBox.Show(ex.Message, "update pro");
             //}
-
-            try
-            {
-                Customer customer = GetCustomerObject();
-                _customerRepository.Update(customer);
-                
-                MessageBox.Show($"{customer.CustomerName} updated successfully", "update pro");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "update pro");
-            }
+          
         }
     }
 }

@@ -17,8 +17,10 @@ namespace ClassLibrary1.Repository
        
 
         List<OrderDetail> GetOrderDetailsByOrderId(int orderId);
+        OrderDetail GetOrderDetailByOderIdAndFlId(OrderDetail orderDetail); 
         void DeleteOrderDetail(OrderDetail orderDetail);
         void Update(OrderDetail orderDetail);
         void InsertOrderDetail(OrderDetail orderDetail);
+        decimal GetTotalSumOrderDetail(int _orderId);
     }
 }

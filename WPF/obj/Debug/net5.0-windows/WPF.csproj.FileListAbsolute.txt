@@ -117,3 +117,5 @@ C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\ob
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_OrderDetail\AdOrderDetail.baml
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_OrderDetail\ADInsertOrderDetail.g.cs
 C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_OrderDetail\ADInsertOrderDetail.baml
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_OrderDetail\AdUpdateOrdetail.g.cs
+C:\Users\ASUS\OneDrive\Máy tính\PRN_ASS1_1001\NguyenThanhTai_SE1605_A01\WPF\obj\Debug\net5.0-windows\Ad_OrderDetail\AdUpdateOrdetail.baml

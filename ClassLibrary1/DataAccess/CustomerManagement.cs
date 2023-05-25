@@ -26,7 +26,20 @@ namespace ClassLibrary1.DataAccess
                 }
             }
         }
-
+        public List<Customer> GetCustomerByEmail(string email)
+        {
+            List<Customer> customers;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                customers = myStockDB.Customers.Where(c => c.Email == email).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return customers;
+        }
         //using singleton pattern
         ///
         public List<Customer> GetCustomers()
@@ -118,30 +131,30 @@ namespace ClassLibrary1.DataAccess
             }
         }
 
-            //}
-            public void Remmove(Customer customer)
+        //}
+        public void Remmove(Customer customer)
+        {
+            try
             {
-                try
-                {
                 Customer cus = GetByID(customer.CustomerId);
-                    if (cus != null)
-                    {
-                        var myStockDB = new FUFlowerBouquetManagementContext();
-                        myStockDB.Customers.Remove(cus);
-                        myStockDB.SaveChanges();
-                    }
-                    else
-                    {
-                        throw new Exception("The customer does not already exist");
-                    }
-                }
-                catch (Exception ex)
+                if (cus != null)
                 {
-                    throw new Exception(ex.Message);
+                    var myStockDB = new FUFlowerBouquetManagementContext();
+                    myStockDB.Customers.Remove(cus);
+                    myStockDB.SaveChanges();
                 }
-
+                else
+                {
+                    throw new Exception("The customer does not already exist");
+                }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
     }
+}
 
 

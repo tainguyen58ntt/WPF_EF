@@ -22,12 +22,12 @@
             </ComboBox>
 
             <Label Name="lbUnitPrice" Content="[UnitPrice]"></Label>
-            <TextBox IsReadOnly="True" Name="txtUnitPrice" Height="25" Text="{Binding Path=UnitPrice, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox  Name="txtUnitPrice" Height="25" Text="{Binding Path=UnitPrice, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
             <Label Name="lbQuantity" Content="[Quantity]"></Label>
-            <TextBox IsReadOnly="True" Name="txtQuantity" Height="25" Text="{Binding Path=Quantity, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox  Name="txtQuantity" Height="25" Text="{Binding Path=Quantity, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
             <Label Name="lbDiscount" Content="[Discount]"></Label>
-            <TextBox IsReadOnly="True" Name="txtDiscount" Height="25" Text="{Binding Path=Discount, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
+            <TextBox Name="txtDiscount" Height="25" Text="{Binding Path=Discount, Mode=OneWay}" DataContext="{Binding ElementName=LvPro, Path=SelectedItem}"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Horizontal"
@@ -35,5 +35,6 @@
             <Button x:Name="btnInsert" Margin="10" Width="80" Content="Insert"
  Click="btnInsert_Click" Height="67"/>
         </StackPanel>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="469,85,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>

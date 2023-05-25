@@ -149,6 +149,7 @@ namespace WPF.Ad_Order
             }
 
         }
+
         private bool checkDuplicateId(Order order)
         {
             Order ord = _oderRepository.GetObjectByOrId(order);
